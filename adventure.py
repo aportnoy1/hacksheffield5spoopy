@@ -21,7 +21,7 @@ def morning():
         elif snooze == "T":
             print("You go into your phone and turn off the alarm.")
         else:
-            print("Please enter a valid option")
+            valid()
             snooze = "S"
     print()
     print("You heave a sigh and reluctantly get out of bed. You go downstairs to get some coffee.")
@@ -52,7 +52,7 @@ def morning():
         elif option == "4":
             bunk()
         else:
-            print("Please input a valid option")
+            valid()
     
 def sports():
     option = 0
@@ -60,7 +60,7 @@ def sports():
         option = input("You head to the gym. What do you want to do, lift some weights (W), or go to the pool (P): ")
         option = option.upper()
         if not(option == "W" or option == "P"):
-            print("please select a valid option")
+            valid()
     if option == "P":
         armband = 0
         armband = input("Do you want to wear armbands? (Y/N): ")
@@ -100,7 +100,7 @@ def sports():
     elif option == "W":
         print("hi")
     else:
-        print("please select a valid option")   
+        valid()  
 
 def pool():
     option = 0
@@ -123,13 +123,10 @@ def bunk():
 
 def win():
     print("Not ready")
-<<<<<<< HEAD
-=======
 
 def valid():
     print("Please print a valid option: ")
 
->>>>>>> e04cf1f4a56313bd15dcdf3c361bed08b9bfa04b
 #Start
 morning()
     
