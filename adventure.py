@@ -15,7 +15,7 @@ def morning():
             print("Please enter a valid option")
             snooze = "S"
     option = 0
-    while option != (1,2,3,4):
+    while option not in [1,2,3,4]:
         print()
         print("You heave a sigh and reluctantly get out of bed. Time to face the day. But what shall you do today?")
         print("You go have some breakfast as you think over your options...")
