@@ -61,6 +61,9 @@ def bunk():
 def win():
     print("Not ready")
 
+def valid():
+    print("Please print a valid option: ")
+
 #Start
 morning()
     
