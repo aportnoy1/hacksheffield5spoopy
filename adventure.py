@@ -123,6 +123,13 @@ def bunk():
 
 def win():
     print("Not ready")
+<<<<<<< HEAD
+=======
+
+def valid():
+    print("Please print a valid option: ")
+
+>>>>>>> e04cf1f4a56313bd15dcdf3c361bed08b9bfa04b
 #Start
 morning()
     
