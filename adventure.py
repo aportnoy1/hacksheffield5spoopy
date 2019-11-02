@@ -48,8 +48,7 @@ def morning():
     
     
 def sports():
-    print("Not ready")
-
+    print("You head to the gym. What do you want to do, lift some weights (W), or go to the pool (P)")
 def course():
     print("Not ready")
 
