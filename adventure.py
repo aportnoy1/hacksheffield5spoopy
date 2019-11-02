@@ -22,7 +22,7 @@ def morning():
         win()
     else:
         print("That's not quite right...")
-        
+
     option = 0
     while option not in [1,2,3,4]:
         print()
@@ -33,7 +33,7 @@ def morning():
         print("(3) You could ditch them both to go to the gym. You haven't been eating that well this week...")
         print("(4) Or you could just ditch completely. You could use a day off after all.")
         print()
-        option = int(input("What should you do today: "))
+        option = input("What should you do today: ")
         if option == 1:
             course()
         elif option == 2:
@@ -44,8 +44,6 @@ def morning():
             bunk()
         else:
             print("Please input a valid option")
-    print("Sounds good.")
-    
     
 def sports():
     print("Not ready")
