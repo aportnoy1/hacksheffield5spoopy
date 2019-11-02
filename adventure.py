@@ -9,6 +9,7 @@ def morning():
         snooze = snooze.upper()
         if snooze == "S":
             print("You hit the button and go back to sleep")
+            print("...")
         elif snooze == "T":
             print("You go into your phone and turn off the alarm.")
         else:
@@ -24,7 +25,7 @@ def morning():
         print("That's not quite right...")
 
     option = 0
-    while option not in [1,2,3,4]:
+    while option not in ["1","2","3","4"]:
         print()
         print("Time to face the day. But what shall you do?")
         print("You go have some breakfast as you think over your options...")
@@ -34,13 +35,13 @@ def morning():
         print("(4) Or you could just ditch completely. You could use a day off after all.")
         print()
         option = input("What should you do today: ")
-        if option == 1:
+        if option == "1":
             course()
-        elif option == 2:
+        elif option == "2":
             test()
-        elif option == 3:
+        elif option == "3":
             sports()
-        elif option == 4:
+        elif option == "4":
             bunk()
         else:
             print("Please input a valid option")
