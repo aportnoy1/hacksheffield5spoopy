@@ -32,7 +32,6 @@ def morning():
         win()
     else:
         print("That's not quite right...")
-    print()
 
     option = 0
     while option not in ["1","2","3","4"]:
@@ -102,6 +101,8 @@ def sports():
             morning()
     elif option == "W":
         print("Option under development")
+        print()
+        sports()
     else:
         valid()  
 
@@ -114,12 +115,15 @@ def pool():
     if option == "W":
         print("yay")
 
-
 def course():
     print("Under development")
+    print()
+    morning()
 
 def test():
     print("Under development")
+    print()
+    morning()
 
 def bunk():
     print("You decide to bunk. What a rebel.")
@@ -210,9 +214,11 @@ def walk():
             trip()
     elif optionWalk == "2":
         print("Option under development")
+        print()
         walk()
     else:
         print("Please input a valid option")
+        print()
         walk()
 
 def killer():
@@ -325,9 +331,13 @@ def trip():
 
 def win():
     print("Under development")
+    print()
+    morning()
 
 def valid():
     print("Please print a valid option: ")
+    print()
+
 
 #Start
 morning()
