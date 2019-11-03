@@ -32,6 +32,7 @@ def morning():
         win()
     else:
         print("That's not quite right...")
+    print()
 
     option = 0
     while option not in ["1","2","3","4"]:
@@ -44,6 +45,7 @@ def morning():
         print("(4) Or you could just ditch completely. You could use a day off after all.")
         print()
         option = input("What should you do today: ")
+        print()
         if option == "1":
             course()
         elif option == "2":
@@ -99,7 +101,7 @@ def sports():
             print("\n\n\n\n\n\n\n\n\n\n")
             morning()
     elif option == "W":
-        print("hi")
+        print("Option under development")
     else:
         valid()  
 
@@ -124,6 +126,7 @@ def bunk():
     print("But where do you go in your rebellious spree?")
     print("(1): You could go for a walk. There are plenty of places around.")
     bunkOption = input("Where will you go: ")
+    print()
     if bunkOption == "1":
         walk()
     elif bunkOption == "2":
@@ -140,6 +143,7 @@ def walk():
     print("(1)The forest would be a nice scenic nature walk.")
     print("(2)The park has some climbing frames with kids, but is also a favourite with dog walkers.")
     optionWalk = input("Where will you go: ")
+    print()
     if optionWalk == "1":
         print("The scenic walk it is!")
         print("You put on your coat and shoes and walk out the door. A quick ten minute walk to the forest passes.")
@@ -164,6 +168,7 @@ def walk():
             print("(1)The path to the left is dark, and surrounded by foliage.")
             print("(2)The path to the right does not differ.")
             forkOne = input("Which path do you take: ")
+            print()
             if forkOne == "1":
                 success = success + 1
             elif forkOne == "2":
@@ -175,6 +180,7 @@ def walk():
             
             print("(2)The path to the right is not worn but there is a faint light.")
             forkTwo = input("Which path do you take: ")
+            print()
             if forkTwo == "1":
                 success = success - 1
             elif forkTwo == "2":
@@ -186,6 +192,7 @@ def walk():
             print("(2)The path to the right is quiet.")
             print("(3)Looking closesly you think you can see a path amid some bushes to the right of you. It's an option, but likely not a good one.")
             forkThree = input("Which path do you take: ")
+            print()
             if forkThree == "1":
                 success = success - 1
             elif forkThree == "2":
@@ -216,6 +223,7 @@ def killer():
         print("Fine. Whatever.")
     else:
         print("Too late.")
+    print()
     print("You crouch down and start pushing your way through into the path.")
     print("Eventually the path forces you onto your hands and knees as you move forwards through the undergrowth.")
     print("You're not sure for how long you have been crawling, but your knees and hands were throbbing.")
@@ -225,6 +233,7 @@ def killer():
         print("(1)Stop")
         print("(2)Crawl faster")
         crawlOne = input("What do you do: ")
+        print()
         if crawlOne == "1":
             print("You stop")
             successCrawl = True
@@ -243,6 +252,7 @@ def killer():
         print("(2)You try to back up through the bush")
         print("(3)You move forward, hoping she can't hear you past her laughter.")
         crawlTwo = input("Which option do you pick: ")
+        print()
         if crawlTwo == "1":
             print("She sways closer and closer to you, and you can see a glimpse of metal in her hand.")
             print("In her strange movement, she slowly turns around and starts to approach the bush where you're stationed.")
@@ -285,6 +295,7 @@ def chase():
     print("You can see the light of the outside ahead! But how many more jumps do you have to make to escape?")
     jumps = random.randint(1,6)
     guess = int(input("Enter a number between 1 and 5: "))
+    print()
     if guess == jumps:
         print("You got it! You jump",jumps,"times and break through the line of trees.")
         print("You can see the woman lurch to a stop in the darkness, eyes almost glowing.")
