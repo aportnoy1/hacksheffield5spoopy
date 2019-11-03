@@ -1,5 +1,7 @@
 #We can make a module for each possible main path of the day
 import random
+import tkinter as tk
+from PIL import ImageTk, Image
 
 #Morning module
 import time
@@ -313,6 +315,8 @@ def chase():
         print("Easy prey for the woman she runs towards you.")
         print("She plunges her knife into your chest, the last thing you see being the image of her eyes as she leans her face into yours.")
         print()
+        runningPopUp("scary.png")
+        print()
         print("DEATH: Woman")
         #code
         print()
@@ -338,6 +342,37 @@ def valid():
     print("Please print a valid option: ")
     print()
 
+class FullScreenWindow(object):
+    def __init__(self, master, **kwargs):
+        self.master=master
+        pad=3
+        self.geom='200x200+0+0'
+        master.geometry("{0}x{1}+0+0".format(
+            master.winfo_screenwidth()-pad, master.winfo_screenheight()-pad))
+        master.bind('<Escape>',self.toggle_geom)
+    def toggle_geom(self, event):
+        geom=self.master.winfo_geometry()
+        print(geom,self._geom)
+        self.master.geometry(self._geom)
+        self._geom=geom
+
+def runningPopUp(path):
+    root=tk.Tk()
+
+    #Creates a Tkinter-compatible photo image, which can be used everywhere Tkinter expects an image object.
+    img = ImageTk.PhotoImage(Image.open(path))
+
+    #The Label widget is a standard Tkinter widget used to display a text or image on the screen.
+    panel = tk.Label(root, image = img)
+
+    #The Pack geometry manager packs widgets in rows or columns.
+    panel.pack(side = "bottom", fill = "both", expand = "yes")
+
+    root.configure(bg="black")
+    app=FullScreenWindow(root)
+    root.after(2500, root.destroy)
+    #root.wm_attributes('-fullscreen','true')
+    root.mainloop()
 
 #Start
 morning()
